@@ -47,9 +47,11 @@ int main()
 	char operacao;
 
 	printf("\nDigite o numero de a:\n");
+	__fpurge(stdin);
 	scanf("%d", &a);
 
 	printf("\nBigite o numero de b:\n");
+	__fpurge(stdin);
 	scanf("%d", &b);
 
 	printf("\nEscolha a operacao:\n");
