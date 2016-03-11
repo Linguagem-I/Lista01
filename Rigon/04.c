@@ -54,10 +54,10 @@ char selecionaOpcao (char opcao, float A, float B){
     case 'b': printf("%f\n", A - B); break;
     case 'm': printf("%f\n", A * B); break;
     case 'd': printf("%f\n", A / B); break;
-    case 'q': printf("%f\n", fmod(A,B)); break;
+    case 'q': printf("%f\n", A / B); break;
     case 'r': printf("%d\n", (int)A % (int)B); break;
     case 'e': printf("%f\n", pow(A,B)); break;
-    case 'z': printf("%f\n", pow(A,(1/A))); break;
+    case 'z': printf("%f\n", pow(B,(1/A))); break;
     default: printf("Opcao invalida\n");
     return opcao;
   }
