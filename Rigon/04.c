@@ -32,9 +32,7 @@ float lerValorB (){
 }
 
 char mostraMenu(){
-  char opcao = ' ', s, b, m, d, q, r, e, z;
-  fflush(stdin);
-  scanf("%c", &opcao);
+  char opcao, s, b, m, d, q, r, e, z;
   fflush(stdin);
   printf("SELECIONE UMA OPERACAO:\n");
   printf("‘s’ - some os valores de A e B\n");
@@ -45,7 +43,7 @@ char mostraMenu(){
   printf("‘r’ - calcule o resto da divisão de A por B\n");
   printf("‘e’ - calcule o resultado de A elevado a B\n");
   printf("‘z’ - calcule o resultado de raiz A-ésima de B, ou seja, B elevado a (1/A)\n");
-  scanf("%c", &opcao);
+  scanf(" %c", &opcao);
   return opcao;
 }
 
