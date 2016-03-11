@@ -15,22 +15,27 @@ escolhida pelo usuário conforme a lista abaixo (Desenvolver um MENU):
 #include <stdlib.h>
 #include <math.h>
 
-int lerValorA (){
-  int valorA;
+float lerValorA (){
+  float valorA;
   printf("Digite o valor de A:\n");
-  scanf("%d", &valorA);
+  scanf("%f", &valorA);
+  fflush(stdin);
   return valorA;
 }
 
-int lerValorB (){
-  int valorB;
+float lerValorB (){
+  float valorB;
   printf("Digite o valor de B:\n");
-  scanf("%d", &valorB);
+  scanf("%f", &valorB);
+  fflush(stdin);
   return valorB;
 }
 
 char mostraMenu(){
-  char opcao, s, b, m, d, q, r, e, z;
+  char opcao = ' ', s, b, m, d, q, r, e, z;
+  fflush(stdin);
+  scanf("%c", &opcao);
+  fflush(stdin);
   printf("SELECIONE UMA OPERACAO:\n");
   printf("‘s’ - some os valores de A e B\n");
   printf("‘b’- subtraia os valores de A e B\n");
@@ -40,12 +45,8 @@ char mostraMenu(){
   printf("‘r’ - calcule o resto da divisão de A por B\n");
   printf("‘e’ - calcule o resultado de A elevado a B\n");
   printf("‘z’ - calcule o resultado de raiz A-ésima de B, ou seja, B elevado a (1/A)\n");
-  printf("_____ _____\n");
-
-  getchar();
   scanf("%c", &opcao);
   return opcao;
-
 }
 
 char selecionaOpcao (char opcao, float A, float B){
@@ -71,4 +72,5 @@ int main(){
   B = lerValorB();
   opcao = mostraMenu();
   selecionaOpcao(opcao, A, B);
+  return 0;
 }
